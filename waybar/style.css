@@ -1,0 +1,229 @@
+@import url("colores.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+
+
+
+
+/* ############################# Espacios de trabajo ########################## */
+#workspaces {
+    border: 3px solid @color-bordes;
+    border-radius: 8px;
+    background-color: @color-fondo;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#workspaces button {
+    padding: 0px 8px;
+    color: @color-texto;
+}
+
+#workspaces button:hover {
+    background: rgba(221, 202, 202, 0.2);
+}
+
+#workspaces button.active {
+    background-color: @color-bordes;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+
+
+
+/* ############################# Espacios de trabajo ########################## */
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+
+
+
+
+/* ############################# Modulos ########################## */
+#clock,
+#battery,
+#cpu,
+#memory,
+/* #custom-system, */
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+/* #idle_inhibitor, */
+#scratchpad,
+#custom-power,
+#window,
+#mpris,
+#mpd {
+    padding: 0px 7px;
+    color: @color-texto;
+    background-color: @color-fondo;
+}
+
+
+#custom-arch {
+    border-radius: 8px;
+    padding: 0 24px;
+    color: @color-texto;
+    background-color: @color-bordes;
+}
+
+
+#cpu,
+#clock,
+#custom-power,
+#backlight,
+#battery,
+#network,
+#memory,
+#temperature {
+    border-top: 3px solid @color-bordes;
+    border-bottom: 3px solid @color-bordes;
+}
+
+
+/* Margenes izquierdas */
+#cpu,
+#backlight,
+#clock {
+    margin-left: 8px;
+    border-left: 3px solid @color-bordes;   
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px;
+}
+
+
+/* bordes derechos */
+#custom-power,
+#network,
+#temperature {
+    border-right: 3px solid @color-bordes;   
+    border-top-right-radius: 8px; 
+    border-bottom-right-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+/* ############################# PulseAudio ########################## */
+#tray,
+#window {
+    background-color: @color-fondo;
+    border: 3px solid @color-bordes;   
+    border-radius: 8px; 
+}
+
+
+
+
+
+
+
+
+/* ############################# PulseAudio ########################## */
+#pulseaudio {
+    border: 3px solid @color-bordes;
+    border-radius: 8px;
+}
+
+#pulseaudio.muted,
+#pulseaudio:hover {
+    background-color: @color-hover;
+    color: @color-hover-texto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################# Temperatura ########################## */
+
+#temperature.critical {
+    background-color: @color-hover;
+}
+
+
+
+
+
+
+
+/* ############################# Iconos ########################## */
+/* #tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+ */
+
+
+
+
+
+/* #mpris {
+    background-color: @color-fondo;
+    color: @color-texto;
+} */
+
+
+
+
+/* ############################# Modulos ########################## */
+/* #idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+} */
+
+
+
