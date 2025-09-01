@@ -6,13 +6,16 @@
     font-weight: bold;
 }
 
-
 window#waybar {
     background-color: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
+window#waybar.empty #window {  
+    border: none;
+    background-color: transparent;
+} 
 
 button {
     box-shadow: inset 0 -3px transparent;
@@ -24,8 +27,6 @@ button {
 button:hover {
     background: inherit;
 }
-
-
 
 
 
@@ -57,17 +58,6 @@ button:hover {
 
 
 
-
-/* ############################# Espacios de trabajo ########################## */
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-
-
-
-
 /* ############################# Modulos ########################## */
 #clock,
 #battery,
@@ -92,12 +82,14 @@ button:hover {
 }
 
 
+
 #custom-arch {
     border-radius: 8px;
     padding: 0 24px;
     color: @color-texto;
     background-color: @color-bordes;
 }
+
 
 
 #cpu,
@@ -113,6 +105,7 @@ button:hover {
 }
 
 
+
 /* Margenes izquierdas */
 #cpu,
 #backlight,
@@ -122,6 +115,7 @@ button:hover {
     border-top-left-radius: 8px; 
     border-bottom-left-radius: 8px;
 }
+
 
 
 /* bordes derechos */
@@ -135,12 +129,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
 /* ############################# PulseAudio ########################## */
 #tray,
 #window {
@@ -151,11 +139,18 @@ button:hover {
 
 
 
+/* #tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+ */
 
 
-
-
-
+ 
 /* ############################# PulseAudio ########################## */
 #pulseaudio {
     border: 3px solid @color-bordes;
@@ -170,52 +165,10 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ############################# Temperatura ########################## */
-
 #temperature.critical {
     background-color: @color-hover;
 }
-
-
-
-
-
-
-
-/* ############################# Iconos ########################## */
-/* #tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
- */
-
-
-
-
-
-/* #mpris {
-    background-color: @color-fondo;
-    color: @color-texto;
-} */
-
 
 
 
