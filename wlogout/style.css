@@ -1,0 +1,75 @@
+@define-color wlogout-hover rgba(47, 50, 52, 0.541);
+@define-color wlogout-bg rgba(81, 86, 89, 0.45);
+@define-color wlogout-button rgba(65, 69, 71, 0.78);
+
+
+
+* {
+    box-shadow: none;
+    transition: 20ms;
+    background-image: none;
+    
+}
+
+window {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: transparent;
+    color: #ebdbb2;
+}
+
+button {
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 3px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%; /* tamaño del ícono dentro */
+
+    color: #ebdbb2;
+    background-color: #090911;
+}
+
+button:focus, button:active, button:hover {
+    background-color: @wlogout-hover;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+    border-top-left-radius: 15px;
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/suspend.png"));
+    border-top-right-radius: 15px;
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+    border-bottom-right-radius: 15px;
+}
+
+#shutdown {
+    background-image: image(url("./icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/reboot.png"));
+    border-bottom-left-radius: 15px;
+}
+
+#lock, #logout, #suspend {
+    border-bottom: 0px;
+}
+
+#logout, #shutdown {
+    border-left: 0px;
+    border-right: 0px;
+}

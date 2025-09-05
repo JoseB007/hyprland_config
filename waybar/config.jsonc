@@ -69,26 +69,26 @@
     // Load Modules
     "include": ["~/.config/waybar/modulos.jsonc"],
 
-    // Choose the order of the modules
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces",
-        "pulseaudio",
-        "mpris"
+        "hyprland/window"
+        // "mpris"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "cpu",
         "memory",
-        // "idle_inhibitor",
         "temperature",
+        "pulseaudio",
+        // "idle_inhibitor",
         "backlight",
         "battery",
         "network",
         "tray",
-        "clock",
+        // "custom/wlogout",
         "custom/power"
     ]
 }

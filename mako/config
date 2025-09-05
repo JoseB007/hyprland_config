@@ -24,6 +24,13 @@ format=<b>%s</b>\n%b
 
 
 
+# Notificacion de bateria
+[app-name=Power]
+layer=overlay
+default-timeout=15000
+
+
+
 # Prioridad de las notificaciones
 [urgency=low]
 default-timeout=15000
