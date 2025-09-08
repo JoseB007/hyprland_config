@@ -59,7 +59,7 @@ killall -9 waybar
 waybar &
 
 # Cargar la paleta como variables del sistema
-. ~/.config/colors/colors.sh
+source ~/.config/colors/colors.sh
 
 # Convertir hex a rgb
 hex_to_rgb() {
@@ -80,3 +80,14 @@ sed \
   -e "s|%background%|$BACKGROUND_RGB|g" \
   -e "s|%foreground%|$FOREGROUND_RGB|g" \
   ~/.config/hypr/hyprlock.conf.template >~/.config/hypr/hyprlock.conf
+
+# Remplazar colores en mako-notifications
+sed \
+  -e "s|%background-color%|$background|g" \
+  -e "s|%text-color%|$foreground|g" \
+  -e "s|%border-color%|$foreground|g" \
+  -e "s|%progress-color%|$foreground|g" \
+  ~/.config/mako/config.template >~/.config/mako/config
+
+# Recargar mako-notifications
+makoctl reload

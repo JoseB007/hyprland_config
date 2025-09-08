@@ -7,13 +7,12 @@
     box-shadow: none;
     transition: 20ms;
     background-image: none;
-    
 }
 
 window {
     font-size: 14pt;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.5);
 }
 
 button {

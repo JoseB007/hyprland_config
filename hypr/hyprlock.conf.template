@@ -78,7 +78,7 @@ input-field {
     valign = center
 
     monitor = $monitor_portatil
-    size = 20%, 4%
+    size = 15%, 4%
     outline_thickness = 3
     inner_color = rgba(0, 0, 0, 0.0) # no fill
 
@@ -108,7 +108,7 @@ image {
     monitor = $monitor_portatil
 
     path = /home/jose/.config/hypr/icons/archlinux-logo.png
-    size = 110
+    size = 80
     rounding = 1
     border_size = 0
 

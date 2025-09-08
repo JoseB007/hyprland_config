@@ -5,4 +5,3 @@ volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')
 
 # Mostrar notificación
 notify-send -t 1000 -a 'wp-vol' -h int:value:$volume "Volume: ${volume}%"
-
