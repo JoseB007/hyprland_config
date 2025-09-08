@@ -23,7 +23,7 @@ general {
 # BACKGROUND
 background {
     monitor = 
-    path = /home/jose/Wallpapers/wallpaper1.png
+    path = %wallpaper%
     blur_passes = 3
     contrast = 0.8916
     brightness = 0.8172
@@ -35,7 +35,7 @@ background {
 label {
   monitor = $monitor_portatil
   text = cmd[update:1000] echo "$(date +"%A, %B %d")"
-  color = rgb(194, 220, 228)
+  color = %foreground%
   font_size = 20
   font_family = SF Pro Display Bold
   
@@ -48,7 +48,7 @@ label {
 label {
   monitor = $monitor_portatil
   text = cmd[update:1000] echo "$(date +"%k:%M")"
-  color = rgb(194, 220, 228)
+  color = %foreground%
   font_size = 93
   font_family = SF Pro Display Bold
   
@@ -82,11 +82,11 @@ input-field {
     outline_thickness = 3
     inner_color = rgba(0, 0, 0, 0.0) # no fill
 
-    outer_color = rgb(194, 220, 228)
+    outer_color = %foreground%
     check_color = rgba(00ff99ee) rgba(ff6633ee) 120deg
     fail_color = rgba(ff6633ee) rgba(ff0066ee) 40deg
 
-    font_color = rgb(194, 220, 228)
+    font_color = %foreground%
     fade_on_empty = false
     rounding = 7
 
