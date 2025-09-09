@@ -3,7 +3,7 @@
     "custom/arch": {
         "format": "",
         "tooltip": false,
-        "on-click": "wofi"
+        "on-click": "rofi -show drun"
     },
 
     "custom/power": {

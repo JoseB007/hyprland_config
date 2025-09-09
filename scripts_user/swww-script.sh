@@ -53,6 +53,7 @@ cp ~/.cache/wal/colors-kitty.conf ~/.config/colors
 cp ~/.cache/wal/colors.css ~/.config/colors
 cp ~/.cache/wal/colors.json ~/.config/colors
 cp ~/.cache/wal/colors.sh ~/.config/colors
+cp ~/.cache/wal/colors-rofi-dark.rasi ~/.config/colors
 
 # Recargar waybar
 killall -9 waybar
