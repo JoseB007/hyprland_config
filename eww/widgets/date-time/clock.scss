@@ -1,0 +1,66 @@
+/** time **/
+.hour_class {
+    color: $foreground;
+    font-size: 160px;
+    font-weight: bold;
+    font-family: "Dosis";
+}
+
+.minute_class {
+    color: $foreground;
+    font-size: 160px;
+    font-weight: bold;
+    font-family: "Dosis";
+}
+
+.mer_class {
+    color: #767c87;
+    font-size: 52px;
+    font-weight: bold;
+    margin: 15px 0px 0px 0px;
+    font-family: "Dosis";
+}
+
+
+.day_class {
+    color: #767c88;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: "Dosis";
+}
+
+.month_class {
+    color: #767c88;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0px 10px 0px 10px;
+    font-family: "Dosis";
+}
+
+.year_class {
+    color: #767c88;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: "Dosis";
+}
+
+
+.time_sep_class {
+    color: #bec8da;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+.day_class_n {
+    color: $foreground;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+.month_class_n {
+    color: $foreground;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}

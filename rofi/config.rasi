@@ -2,11 +2,12 @@
 
 configuration {
   font: "JetBrainsMono Nerd Font 12";
-  modi: "drun,run,window";
+  // modi: "drun,run,window";
+  // display-drun: "󰍜";
+  // display-run: "";
+  // display-window: "";
+  modi: "drun";
   show-icons: true;
-  display-drun: "󰍜";
-  display-run: "";
-  display-window: "";
   drun-display-format: "{icon} {name}";
 }
 
@@ -139,7 +140,7 @@ element-text {
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     margin:                      0px;
     padding:                     0px 250px;

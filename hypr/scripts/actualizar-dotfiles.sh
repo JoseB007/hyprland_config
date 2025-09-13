@@ -17,6 +17,7 @@ cp -r ~/.config/waybar "$DEST"
 cp -r ~/.config/colors "$DEST"
 cp -r ~/.config/wlogout "$DEST"
 cp -r ~/.config/scripts_user "$DEST"
+cp -r ~/.config/eww "$DEST"
 cp ~/.config/starship.toml "$DEST"
 
 notify-send -t 10000 "Actualización de Dotfiles completada."

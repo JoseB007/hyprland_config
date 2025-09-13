@@ -1,0 +1,103 @@
+(defpoll time_hour :interval "1m"
+    "date +\"%H\"")
+(defpoll time_year :interval "1m"
+    "date +\"%Y\"")
+(defpoll time_min :interval "1s"
+    "date +\"%M\"")
+(defpoll time_mer :interval "1s"
+    "date +\"%p\"")
+(defpoll time_day :interval "1s"
+    "date +\"%d\"")
+(defpoll time_month :interval "1s"
+    "date +\%m")
+(defpoll time_day_name :interval "1s"
+    "date +\"%A\"")
+(defpoll time_month_name :interval "1s"
+    "date +\%B")
+
+
+
+(defwindow time
+    :monitor 0
+    :stacking "bg"
+    :geometry (geometry :anchor "top left"
+    :x "2%"
+    :y "2%")
+    (time)
+)
+
+
+
+(defwidget time [] 
+    (box  
+        :orientation "v" 
+        :space-evenly "false" 
+        :vexpand "false" 
+        :hexpand "false" 
+        :spacing 0
+		(box  
+            :orientation "h" 
+            :space-evenly "false" 
+            :vexpand "false" 
+            :halign "start"
+            :hexpand "false" 
+            :spacing 0
+            (label :class "hour_class" 
+                :valign "start" 
+                :halign "start"
+                :wrap "true" 
+
+                :text "${time_hour}:"
+            )
+            (label :class "minute_class" 
+                :valign "start" 
+                :halign "start" 
+                :wrap "true" 
+
+                :text "${time_min}"
+            )
+            (label :class "mer_class" 
+                :valign "start" 
+                :halign "start" 
+                :wrap "true" 
+                :text time_mer
+            )
+        )
+        (box :orientation "h" 
+            :spacing 0 
+            :space-evenly "false" 
+            :halign "start"
+            :vexpand "false" :hexpand "false" 
+            (label :class "day_class_n" 
+                :valign "start" 
+                :text "${time_day_name},"        
+            )
+            (label :class "time_sep_class"
+                :valign "start" 
+                :text ", "
+            )
+            (label :class "month_class_n" 
+                :valign "start" 
+                :text time_month_name
+            )
+        )
+        (box :orientation "h" 
+            :spacing 0 
+            :space-evenly "false" 
+            :halign "start"
+            :vexpand "false" :hexpand "false" 
+            (label :class "day_class" 
+                :valign "start" 
+                :text time_day
+            )
+            (label :class "month_class" 
+                :valign "start" 
+                :text time_month
+            )
+            (label :class "year_class" 
+                :valign "start" 
+                :text time_year
+            )
+        )
+    )
+)

@@ -1,0 +1,5 @@
+(include "./widgets/active-linux/active-linux.yuck")
+
+(include "./widgets/fecha-hora/fecha-hora.yuck")
+
+(include "./widgets/date-time/clock.yuck")

@@ -1,0 +1,20 @@
+// Import pywal generated colors
+@import "/home/jose/.cache/wal/colors.scss";
+
+
+@import './widgets/active-linux/active-linux.scss';
+
+
+@import './widgets/fecha-hora/fecha-hora.scss';
+
+
+@import './widgets/date-time/clock.scss';
+
+
+
+* {
+  all: unset;
+  // font-family: "JetBrainsMono Nerd Font Propo";
+}
+
+

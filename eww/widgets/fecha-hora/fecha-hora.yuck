@@ -1,0 +1,57 @@
+;; Hora
+(defpoll hour    :interval "1s" "date +%H")
+(defpoll minute  :interval "1s" "date +%M")
+
+
+;; Uptime (tiempo encendido)
+(defpoll uptime  :interval "1m" "uptime -p | sed 's/up //'")
+
+
+;; Fecha
+(defpoll date :interval "1h" `date +'{"date":"%d \de\ %B","day":"%A"}'`)
+
+
+(defwindow date-time
+  :monitor 0
+  :geometry (geometry 
+    :x "2%"
+    :y "2%"
+    :anchor "bottom left"
+  )
+  :stacking "bg"
+  (box 
+    :orientation "v" 
+    :space-evenly false
+ 
+    (hora)
+    (fecha)
+  )
+)
+
+(defwidget hora []
+  (label 
+    :class "hour" 
+    :text "${hour}:${minute}"
+    :xalign 0
+  )
+)
+
+(defwidget fecha []
+  (box
+    :orientation "v"
+    :space-evenly false
+
+    (label 
+      :class "f-time" 
+      :text "${date.day}, ${date.date}"
+      :xalign 0
+    )
+    (label 
+      :class "uptime" 
+      :text "${uptime}"
+      :xalign 0
+    )
+  )
+)
+
+
