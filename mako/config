@@ -7,16 +7,16 @@ margin=20
 padding=15
 
 # Colors
-background-color=#0E0B20
-text-color=#c5e5ec
-border-color=#c5e5ec
-progress-color=#c5e5ec
+background-color=#191918
+text-color=#e9e1cf
+border-color=#e9e1cf
+progress-color=#e9e1cf
 
 
 
 # Notificacion de volumen
 [app-name=wp-vol]
-text-color=#0E0B20
+text-color=#191918
 layer=overlay
 anchor=top-center
 history=0

@@ -26,9 +26,9 @@ TRANSITION_SELECTED=$(printf "%s\n" "${TRANSITION_TYPES[@]}" | shuf -n 1)
 # ==========================
 
 # Inicializar swww si no está corriendo
-# if ! pgrep -x "swww-daemon" >/dev/null; then
-#   swww-daemon
-# fi
+if ! pgrep -x "swww-daemon" >/dev/null; then
+  swww-daemon
+fi
 
 # Aplicar wallpaper con parámetros definidos
 swww img "$WALLPAPER" \
